@@ -42,7 +42,7 @@ Hi! My name is [Your Full Name].
 <a href="{{site.baseurl}}/snake" class="button small" style="background-color: #6b4bd3ff">
     Snake Game
 </a>
-<a href="{{site.baseurl}}/turtle" class="button small" style="background-color: #2A7DB1">
+<a href="{{site.baseurl}}/turtle" class="button small" style="background-color: #0e7a0dff">
     <span style="color: #000000">Turtle</span>
 </a>
 
@@ -54,3 +54,6 @@ Hi! My name is [Your Full Name].
 > Feel free to reach out if you'd like to collaborate or learn more about our work.
 
 <p style="color: #2A7DB1;">Open Coding Society: <a href="https://opencodingsociety.com" style="color: #2A7DB1; text-decoration: underline;">Socials</a></p>
+
+## FUN FACTS
+### I currently attend Del Norte Highschool as a sophomore and I have lived in San Diego my whole life.
