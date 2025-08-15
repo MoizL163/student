@@ -45,9 +45,7 @@ Hi! My name is Moiz Lukmani.
 <a href="{{site.baseurl}}/turtle" class="button small turtle-game" aria-label="Play Turtle Game">
     Turtle
 </a>
-<button class="medium filledHighlight primary">Submit</button>
-    Inspiration
-</button>
+<button class="medium filledHighlight primary">Inspiration</button>
 <style>
 .inspiration-button {
     background: linear-gradient(45deg, #ff6b6b, #feca57) !important;
