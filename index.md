@@ -45,7 +45,33 @@ Hi! My name is Moiz Lukmani.
 <a href="{{site.baseurl}}/turtle" class="button small turtle-game" aria-label="Play Turtle Game">
     Turtle
 </a>
+<button class="medium filledHighlight primary">Submit</button>
+    Inspiration
+</button>
+<style>
+.inspiration-button {
+    background: linear-gradient(45deg, #ff6b6b, #feca57) !important;
+    color: white !important;
+    border: none !important;
+    padding: 15px 30px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    border-radius: 25px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
 
+.inspiration-button:hover {
+    background: linear-gradient(45deg, #ff5252, #ff9800) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+}
+
+.inspiration-button:active {
+}
+</style>
 <style>
 .snake-game {
     background-color: #6b4bd3 !important;
