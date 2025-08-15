@@ -39,12 +39,32 @@ Hi! My name is [Your Full Name].
 
 ### Class Progress
 
-<a href="{{site.baseurl}}/snake" class="button small" style="background-color: #6b4bd3ff">
+<a href="{{site.baseurl}}/snake" class="button small snake-game" aria-label="Play Snake Game">
     Snake Game
 </a>
-<a href="{{site.baseurl}}/turtle" class="button small" style="background-color: #0e7a0dff">
-    <span style="color: #000000">Turtle</span>
+<a href="{{site.baseurl}}/turtle" class="button small turtle-game" aria-label="Play Turtle Game">
+    Turtle
 </a>
+
+<style>
+.snake-game {
+    background-color: #6b4bd3 !important;
+}
+
+.turtle-game {
+    background-color: #0e7a0d !important;
+    color: #ffffff !important;
+}
+
+.button.small {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button.small:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+</style>
 
 <br>
 
