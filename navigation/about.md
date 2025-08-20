@@ -158,13 +158,13 @@ Flags are made using Wikipedia images
 <body>
     <h1>About Me 👋</h1>
     
-    <p>Hey! I'm passionate about cybersecurity and pretty much every sport that exists. I approach cyber defense like a defensive coordinator - always thinking three moves ahead and protecting what matters most.</p>
+    <p>Hey! I'm passionate about cybersecurity and pretty much every sport that exists.</p>
     
     <h2>🛡️ What I Do</h2>
     <p>I work in cybersecurity where I get to solve puzzles and build defenses against creative attacks. Every vulnerability is just another challenge, and honestly, I love the mental chess game of staying ahead of threats.</p>
     
     <h2>🏈 Sports Obsession</h2>
-    <p>If there's a ball, puck, or any kind of competitive action involved, I'm probably watching it. Football, basketball, baseball, hockey, tennis - you name it, I follow it. I analyze sports stats with the same intensity I bring to threat analysis.</p>
+    <p>If there's a ball, puck, or any kind of competitive action involved, I'm probably watching it. Football, basketball, baseball, hockey, tennis - you name it, I follow it.</p>
     
     <h2>🎮 Downtime</h2>
     <p>When I'm not working, you'll find me:</p>
@@ -182,7 +182,7 @@ Flags are made using Wikipedia images
     <ul>
         <li>My perfect evening involves sports highlights, YouTube, and some serious Xbox time</li>
         <li>I can get super energized talking cybersecurity, then go home and spend hours perfecting my gaming setup</li>
-        <li>My friends joke that I study game film with the same focus I use for security analysis</li>
+       
     </ul>
     
     <div class="highlight">
