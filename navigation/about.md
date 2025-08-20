@@ -61,9 +61,6 @@ Flags are made using Wikipedia images
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
         {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "b/b9/Flag_of_Oregon.svg", "greeting": "Hi", "description": "Oregon - 9 years"},
-        {"flag": "b/be/Flag_of_England.svg", "greeting": "Alright mate", "description": "England - 2 years"},
-        {"flag": "e/ef/Flag_of_Hawaii.svg", "greeting": "Aloha", "description": "Hawaii - 2 years"},
     ];
 
     // 3a. Consider how to update style count for size of container
@@ -99,17 +96,100 @@ Flags are made using Wikipedia images
 
 ### Journey through Life
 
-Here is what I did at those places
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fafbfc;
+            color: #333;
+            line-height: 1.6;
+        }
 
-- 🏫 Lots of Elementary Schools in Tucson, LA, Honolulu, and Glendale (CA)
-- 🏫 Middle and High School in Glendale (CA), Hoover High graduated '77
-- 🎓 Glendale CA Community College, UCLA Extension, LA Wilshire Computer Tech School '77 to '79
-- ⛪ England, London Missionary for Church of Jesus Christ of Latter-day Saints '79 to '81
-- 💼 Culver City, Glendale CA founder at Ashton-Tate, original PC's dBase 2 and 3 '82 to '87
-- 🎓 Eugene Oregon Undergraduate CompSci Degree at University of Oregon (Go Ducks!) '89 to '91
-- 💼 Eugene Oregon, founder and owner @ Microniche `88, Point Control CAD CAM developer '91 to '96
-- 🏢 San Diego CA Qualcomm, Satellite Comm and 1st Mobile OS (BREW) '96 to '19
-- 👨‍🏫 San Diego CA Teacher of Computer Science @ Del Norte High School San Diego '19 to present
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #2c5aa0;
+            border-bottom: 3px solid #e8f0fe;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #1a73e8;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            background-color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>About Me 👋</h1>
+    
+    <p>Hey! I'm passionate about cybersecurity and pretty much every sport that exists. I approach cyber defense like a defensive coordinator - always thinking three moves ahead and protecting what matters most.</p>
+    
+    <h2>🛡️ What I Do</h2>
+    <p>I work in cybersecurity where I get to solve puzzles and build defenses against creative attacks. Every vulnerability is just another challenge, and honestly, I love the mental chess game of staying ahead of threats.</p>
+    
+    <h2>🏈 Sports Obsession</h2>
+    <p>If there's a ball, puck, or any kind of competitive action involved, I'm probably watching it. Football, basketball, baseball, hockey, tennis - you name it, I follow it. I analyze sports stats with the same intensity I bring to threat analysis.</p>
+    
+    <h2>🎮 Downtime</h2>
+    <p>When I'm not working, you'll find me:</p>
+    <ul>
+        <li>Deep in YouTube rabbit holes about random topics</li>
+        <li>Gaming on my Xbox (my setup is my pride and joy)</li>
+        <li>Catching highlights from whatever sport is in season</li>
+        <li>Learning something new in cybersecurity</li>
+    </ul>
+    
+    <h2>😊 Personality</h2>
+    <p>I'm pretty outgoing and love diving into complex problems with people, but I also value those quiet moments to recharge and think things through. Some of my best problem-solving techniques actually come from gaming - patience, strategy, and trying different approaches until something works.</p>
+    
+    <h2>⚡ Fun Facts</h2>
+    <ul>
+        <li>My perfect evening involves sports highlights, YouTube, and some serious Xbox time</li>
+        <li>I can get super energized talking cybersecurity, then go home and spend hours perfecting my gaming setup</li>
+        <li>My friends joke that I study game film with the same focus I use for security analysis</li>
+    </ul>
+    
+    <div class="highlight">
+        <p><em>Life's too short for boring conversations and easy games! 🚀</em></p>
+    </div>
+</body>
+</html>
 
 ### Culture, Family, and Fun
 
