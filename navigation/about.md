@@ -96,6 +96,7 @@ Flags are made using Wikipedia images
 
 ### Journey through Life
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -108,15 +109,15 @@ Flags are made using Wikipedia images
             margin: 0 auto;
             padding: 40px 20px;
             background-color: #000000;
-            color: #333;
+            color: #ffffff;
             line-height: 1.6;
         }
 
         h1 {
             font-size: 28px;
             margin-bottom: 20px;
-            color: #2c5aa0;
-            border-bottom: 3px solid #6fd3d5ff;
+            color: #64b5f6;
+            border-bottom: 3px solid #e8f0fe;
             padding-bottom: 10px;
         }
 
@@ -124,12 +125,13 @@ Flags are made using Wikipedia images
             font-size: 18px;
             margin-top: 30px;
             margin-bottom: 10px;
-            color: #1a73e8;
+            color: #81c784;
         }
 
         p {
             margin-bottom: 15px;
             font-size: 14px;
+            color: #ffffff;
         }
 
         ul {
@@ -147,7 +149,7 @@ Flags are made using Wikipedia images
         }
 
         .highlight {
-            background-color: #38362fff;
+            background-color: #fff3cd;
             padding: 15px;
             border-radius: 8px;
             border-left: 4px solid #ffc107;
@@ -182,7 +184,7 @@ Flags are made using Wikipedia images
     <ul>
         <li>My perfect evening involves sports highlights, YouTube, and some serious Xbox time</li>
         <li>I can get super energized talking cybersecurity, then go home and spend hours perfecting my gaming setup</li>
-       
+
     </ul>
     
     <div class="highlight">

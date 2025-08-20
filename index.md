@@ -47,18 +47,6 @@ Hi! My name is Moiz Lukmani.
 </a>
 <button class="medium filledHighlight primary">Inspiration</button>
 <style>
-.inspiration-button {
-    background: linear-gradient(45deg, #ff6b6b, #feca57) !important;
-    color: white !important;
-    border: none !important;
-    padding: 15px 30px !important;
-    font-size: 16px !important;
-    font-weight: bold !important;
-    border-radius: 25px !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
-    transition: all 0.3s ease !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
 }
 
 .inspiration-button:hover {
