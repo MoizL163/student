@@ -109,7 +109,7 @@ Flags are made using Wikipedia images
             margin: 0 auto;
             padding: 40px 20px;
             background-color: #000000;
-            color: #ffffff;
+            color: #221d1dff;
             line-height: 1.6;
         }
 
@@ -117,7 +117,7 @@ Flags are made using Wikipedia images
             font-size: 28px;
             margin-bottom: 20px;
             color: #64b5f6;
-            border-bottom: 3px solid #e8f0fe;
+            border-bottom: 3px solid #26282bff;
             padding-bottom: 10px;
         }
 
@@ -131,7 +131,7 @@ Flags are made using Wikipedia images
         p {
             margin-bottom: 15px;
             font-size: 14px;
-            color: #ffffff;
+            color: #1b1616ff;
         }
 
         ul {
@@ -149,7 +149,7 @@ Flags are made using Wikipedia images
         }
 
         .highlight {
-            background-color: #fff3cd;
+            background-color: #396864ff;
             padding: 15px;
             border-radius: 8px;
             border-left: 4px solid #ffc107;
