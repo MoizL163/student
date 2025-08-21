@@ -102,62 +102,62 @@ Flags are made using Wikipedia images
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <<style>
-    body {
-        font-family: 'Arial', sans-serif;
-        max-width: 700px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        background-color: #000000;
-        color: #221d1dff;
-        line-height: 1.6;
-    }
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #000000;
+            color: #221d1dff;
+            line-height: 1.6;
+        }
 
-    h1 {
-        font-size: 28px;
-        margin-bottom: 20px;
-        color: #64b5f6;
-        border-bottom: 3px solid #000000ff;
-        padding-bottom: 10px;
-    }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #64b5f6;
+            border-bottom: 3px solid #000000ff;
+            padding-bottom: 10px;
+        }
 
-    h2 {
-        font-size: 18px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-        color: #81c784;
-    }
+        h2 {
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #81c784;
+        }
 
-    p {
-        margin-bottom: 15px;
-        font-size: 14px;
-        color: #000000ff;
-    }
+        p {
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #000000ff;
+        }
 
-    ul {
-        margin-bottom: 15px;
-        padding-left: 20px;
-        background-color: #FFFDD0; /* Cream color */
-        padding: 15px 20px;
-        border-radius: 8px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        color: #000000; /* Black text */
-    }
+        ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            background-color: #FFFDD0; /* Cream color */
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            color: #000000; /* Black text */
+        }
 
-    li {
-        margin-bottom: 8px;
-        font-size: 14px;
-    }
+        li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
 
-    .highlight {
-        background-color: #FFFDD0; /* Cream color */
-        padding: 15px;
-        border-radius: 8px;
-        border-left: 4px solid #ffc107;
-        margin: 20px 0;
-        color: #000000; /* Black text */
-    }
-</style>
+        .highlight {
+            background-color: #FFFDD0; /* Cream color */
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            color: #000000; /* Black text */
+        }
+    </style>
 </head>
 <body>
     <h1>About Me 👋</h1>
@@ -186,7 +186,7 @@ Flags are made using Wikipedia images
     <ul>
         <li>My perfect evening involves sports highlights, YouTube, and some serious Xbox time</li>
         <li>I can get super energized talking cybersecurity, then go home and spend hours perfecting my gaming setup</li>
-
+        
     </ul>
     
     <div class="highlight">
