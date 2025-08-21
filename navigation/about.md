@@ -30,7 +30,7 @@ comments: true
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.98);
+            background: #ffffff;
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -51,7 +51,7 @@ comments: true
         h2 {
             font-size: 1.4em;
             margin: 30px 0 15px 0;
-            color: #34495e;
+            color: #1a1a1a;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -60,7 +60,7 @@ comments: true
         h3 {
             font-size: 1.8em;
             margin: 40px 0 20px 0;
-            color: #2c3e50;
+            color: #1a1a1a;
             border-bottom: 3px solid #667eea;
             padding-bottom: 10px;
         }
@@ -68,8 +68,8 @@ comments: true
         p {
             margin-bottom: 15px;
             font-size: 16px;
-            color: #2c3e50;
-            font-weight: 500;
+            color: #1a1a1a;
+            font-weight: 600;
         }
 
         ul {
@@ -84,10 +84,10 @@ comments: true
         li {
             margin-bottom: 10px;
             font-size: 15px;
-            color: #2c3e50;
+            color: #1a1a1a;
             position: relative;
             padding-left: 10px;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         li::before {
@@ -154,13 +154,14 @@ comments: true
         }
 
         .grid-item .description {
-            font-weight: 600;
-            color: #2c3e50;
+            font-weight: 700;
+            color: #1a1a1a;
         }
 
         .grid-item .greeting {
             color: #667eea;
             font-style: italic;
+            font-weight: 600;
         }
 
         /* Image Gallery */
