@@ -137,7 +137,7 @@ Flags are made using Wikipedia images
         ul {
             margin-bottom: 15px;
             padding-left: 20px;
-            background-color: #FFFDD0; /* Cream color */
+            background-color: #3a5b58ff; /* Cream color */
             padding: 15px 20px;
             border-radius: 8px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -150,7 +150,7 @@ Flags are made using Wikipedia images
         }
 
         .highlight {
-            background-color: #FFFDD0; /* Cream color */
+            background-color: #3a5b58ff; /* Cream color */
             padding: 15px;
             border-radius: 8px;
             border-left: 4px solid #ffc107;
