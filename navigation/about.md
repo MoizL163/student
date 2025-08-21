@@ -5,6 +5,7 @@ permalink: /about/
 comments: true
 ---
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +30,7 @@ comments: true
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -67,7 +68,8 @@ comments: true
         p {
             margin-bottom: 15px;
             font-size: 16px;
-            color: #34495e;
+            color: #2c3e50;
+            font-weight: 500;
         }
 
         ul {
@@ -82,9 +84,10 @@ comments: true
         li {
             margin-bottom: 10px;
             font-size: 15px;
-            color: #495057;
+            color: #2c3e50;
             position: relative;
             padding-left: 10px;
+            font-weight: 500;
         }
 
         li::before {
