@@ -24,7 +24,7 @@ comments: true
             max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #9333EA 100%);
             min-height: 100vh;
             line-height: 1.7;
         }
@@ -58,9 +58,10 @@ comments: true
         h3 {
             font-size: 1.8em;
             margin: 40px 0 20px 0;
-            color: #1a1a1a;
-            border-bottom: 3px solid #667eea;
+            color: #000000 !important;
+            border-bottom: 3px solid #A855F7;
             padding-bottom: 10px;
+            font-weight: 800;
         }
 
         p {
@@ -73,36 +74,36 @@ comments: true
         ul {
             margin: 15px 0;
             padding: 20px 25px;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            background: #FFFFFF;
             border-radius: 12px;
-            border-left: 4px solid #667eea;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #A855F7;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
         }
 
         li {
             margin-bottom: 10px;
             font-size: 15px;
-            color: #1a1a1a;
+            color: #000000 !important;
             position: relative;
             padding-left: 10px;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         li::before {
             content: "•";
-            color: #667eea;
+            color: #A855F7;
             font-weight: bold;
             position: absolute;
             left: -10px;
         }
 
         .highlight {
-            background: linear-gradient(135deg, #ffd89b, #19547b);
+            background: linear-gradient(135deg, #A855F7, #8B5CF6);
             padding: 25px;
             border-radius: 15px;
             margin: 30px 0;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.3);
         }
 
         .highlight p {
@@ -152,14 +153,14 @@ comments: true
         }
 
         .grid-item .description {
-            font-weight: 700;
-            color: #1a1a1a;
+            font-weight: 800;
+            color: #000000 !important;
         }
 
         .grid-item .greeting {
-            color: #667eea;
+            color: #A855F7 !important;
             font-style: italic;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         /* Image Gallery */
@@ -184,7 +185,7 @@ comments: true
         }
 
         .image-gallery::-webkit-scrollbar-thumb {
-            background: #667eea;
+            background: #A855F7;
             border-radius: 10px;
         }
 
