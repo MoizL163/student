@@ -6,7 +6,7 @@ comments: true
 ---
 
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,21 +40,19 @@ comments: true
         h1 {
             font-size: 2.5em;
             margin-bottom: 30px;
-            color: #2c3e50;
+            color: #000000 !important;
             text-align: center;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 800;
         }
 
         h2 {
             font-size: 1.4em;
             margin: 30px 0 15px 0;
-            color: #1a1a1a;
+            color: #000000 !important;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-weight: 700;
         }
 
         h3 {
@@ -68,8 +66,8 @@ comments: true
         p {
             margin-bottom: 15px;
             font-size: 16px;
-            color: #1a1a1a;
-            font-weight: 600;
+            color: #000000 !important;
+            font-weight: 700;
         }
 
         ul {
