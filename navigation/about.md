@@ -225,7 +225,7 @@ comments: true
 </head>
 <body>
     <div class="container">
-        <h1>About Me 👋</h1>
+        <h1>About Me </h1>
         
         <p>Hey! I'm passionate about cybersecurity and pretty much every sport that exists. Welcome to my corner of the internet where I share a bit about who I am and what makes me tick.</p>
         
@@ -237,39 +237,39 @@ comments: true
             </div>
         </div>
 
-        <h3>🚀 My Journey Through Life</h3>
+        <h3>My Journey Through Life</h3>
         
-        <h2>🛡️ What I Do</h2>
-        <p>I work in cybersecurity where I get to solve puzzles and build defenses against creative attacks. Every vulnerability is just another challenge, and honestly, I love the mental chess game of staying ahead of threats. It's like playing defense in the ultimate strategy game where the rules are constantly evolving.</p>
+        <h2>What I Do</h2>
+        <p>I work in cybersecurity where I get to solve puzzles and build defenses against creative attacks. Every vulnerability is just another challenge, and honestly, I love the mental chess game of staying ahead of threats. </p>
         
-        <h2>🏈 Sports Obsession</h2>
+        <h2>Sports</h2>
         <p>If there's a ball, puck, or any kind of competitive action involved, I'm probably watching it. Football, basketball, baseball, hockey, tennis - you name it, I follow it. There's something about the strategy, the teamwork, and those clutch moments that just gets me every time.</p>
         
-        <h2>🎮 When I'm Not Working</h2>
+        <h2>Free Time</h2>
         <p>My downtime is sacred, and here's how I spend it:</p>
         <ul>
-            <li>Deep diving into YouTube rabbit holes about random topics (you know how it is - you start with cybersecurity tutorials and end up watching documentary about penguins)</li>
+            <li>Deep diving into YouTube rabbit holes about random topics</li>
             <li>Gaming on my Xbox - my setup is my pride and joy and I'm always tweaking it to perfection</li>
             <li>Catching highlights from whatever sport is in season</li>
             <li>Learning something new in cybersecurity because the field never stops evolving</li>
-            <li>Spending quality time with family - they keep me grounded</li>
+            <li>Spending quality time with family, they keep me grounded</li>
         </ul>
         
-        <h2>😊 Who I Am</h2>
+        <h2>Who I Am</h2>
         <p>I'm pretty outgoing and love diving into complex problems with people, but I also value those quiet moments to recharge and think things through. Some of my best problem-solving techniques actually come from gaming - patience, strategy, and trying different approaches until something clicks.</p>
         
-        <h2>⚡ Fun Facts About Me</h2>
+        <h2>Fun Facts About Me</h2>
         <ul>
             <li>My perfect evening involves sports highlights, YouTube deep dives, and some serious Xbox time</li>
             <li>I can get super energized talking cybersecurity, then go home and spend hours perfecting my gaming setup</li>
             <li>I believe the best solutions come from combining technical skills with creative thinking</li>
-            <li>Family game nights are non-negotiable in my schedule</li>
+            
         </ul>
         
         <h3>👨‍👩‍👦‍👦 Family & Culture</h3>
-        <p>Everything for me, as for many others, revolves around family and faith. My mom moved to India at a very young age from Dubai, and my dad was born and raised in India. I have a younger brother in 5th grade who's incredibly fun to be around. He can be quiet sometimes, but I love him to pieces - he always manages to surprise me with his insights and humor.</p>
+        <p>Everything for me, as for many others, revolves around family and faith. My mom moved to India at a very young age from Dubai, and my dad was born and raised in India. I have a younger brother in 5th grade who's incredibly fun to be around.</p>
         
-        <p>Our family story spans continents and cultures, and that diversity has given me a unique perspective on problem-solving and connecting with people from all walks of life.</p>
+        <p>Our family story spans continents and cultures, and that diversity has given me a unique perspective on problem, solving and connecting with people from all walks of life.</p>
 
         <h3>📸 Memories & Moments</h3>
         <p>Here are some snapshots from my journey - scroll to see more!</p>
@@ -282,7 +282,7 @@ comments: true
         </div>
         
         <div class="highlight">
-            <p><em>Life's too short for boring conversations and easy games! Let's make it count. 🚀</em></p>
+            <p><em>Life's too short. Let's make it count. </em></p>
         </div>
     </div>
 
