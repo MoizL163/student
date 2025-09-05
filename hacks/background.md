@@ -10,13 +10,18 @@ permalink: /background
 <canvas id="world"></canvas>
 
 <script>
+
+  // Defines canvas
   const canvas = document.getElementById("world");
   const ctx = canvas.getContext('2d');
+  // Setting up image ojects
   const backgroundImg = new Image();
   const spriteImg = new Image();
-  backgroundImg.src = '{{page.background}}';
-  spriteImg.src = '{{page.sprite}}';
+  // Jekyll assignment of images to JS
+  backgroundImg.src = '{{page.background}}'; //Background Image
+  spriteImg.src = '{{page.sprite}}'; // Sprite Image
 
+  // Image loading code block
   let imagesLoaded = 0;
   backgroundImg.onload = function() {
     imagesLoaded++;
@@ -27,6 +32,8 @@ permalink: /background
     startGameWorld();
   };
 
+  // Block starts the game
+  //Check for all the images being loaded into the game
   function startGameWorld() {
     if (imagesLoaded < 2) return;
 
