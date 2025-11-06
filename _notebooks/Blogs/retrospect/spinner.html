@@ -1,0 +1,128 @@
+from IPython.display import HTML
+
+html_content = '''
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .spinner-widget {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+        .wheel {
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            position: relative;
+            transition: transform 2s ease-out;
+            background: black;
+        }
+        .slice {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            transform-origin: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            border: 1px solid #333;
+            color: white;
+        }
+        .slice:nth-child(1) { transform: rotate(0deg) skewY(-18deg); }
+        .slice:nth-child(2) { transform: rotate(72deg) skewY(-18deg); }
+        .slice:nth-child(3) { transform: rotate(144deg) skewY(-18deg); }
+        .slice:nth-child(4) { transform: rotate(216deg) skewY(-18deg); }
+        .slice:nth-child(5) { transform: rotate(288deg) skewY(-18deg); }
+        
+        .spin-btn {
+            padding: 10px 30px;
+            font-size: 16px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .spin-btn:hover { background: #333; }
+        .spin-btn:disabled { background: #ccc; cursor: not-allowed; }
+        
+        .result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            min-height: 25px;
+        }
+        
+        .message {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner-widget">
+        <div class="wheel" id="wheel">
+            <div class="slice">START</div>
+            <div class="slice">STOP</div>
+            <div class="slice">CONTINUE</div>
+            <div class="slice">MORE</div>
+            <div class="slice">LESS</div>
+        </div>
+        <button class="spin-btn" id="spinBtn">Spin</button>
+        <div class="result" id="result"></div>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        const wheel = document.getElementById('wheel');
+        const btn = document.getElementById('spinBtn');
+        const result = document.getElementById('result');
+        const message = document.getElementById('message');
+        const allOptions = ['START', 'STOP', 'CONTINUE', 'MORE', 'LESS'];
+        let availableOptions = [...allOptions];
+        let spinning = false;
+
+        btn.addEventListener('click', () => {
+            if (spinning || availableOptions.length === 0) return;
+            spinning = true;
+            btn.disabled = true;
+            result.textContent = '';
+
+            const randomIndex = Math.floor(Math.random() * availableOptions.length);
+            const selected = availableOptions[randomIndex];
+            
+            // Remove selected option from available options
+            availableOptions.splice(randomIndex, 1);
+            
+            const optionIndex = allOptions.indexOf(selected);
+            const extraSpins = 4;
+            const totalRotation = (360 * extraSpins) + (optionIndex * 72) + 36;
+            
+            wheel.style.transform = `rotate(${totalRotation}deg)`;
+
+            setTimeout(() => {
+                result.textContent = selected;
+                
+                if (availableOptions.length === 0) {
+                    message.textContent = 'All options have been selected!';
+                    btn.disabled = true;
+                } else {
+                    message.textContent = `${availableOptions.length} option(s) remaining`;
+                    btn.disabled = false;
+                }
+                
+                spinning = false;
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
+'''
+
+HTML(html_content)
