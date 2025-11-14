@@ -9,3 +9,6 @@ gem "csv", "~> 3.3"
 gem "logger"
 gem "observer"
 gem "bigdecimal"
+
+gem "minima", "~> 2.5"
+gem "jekyll-theme-so-simple"
