@@ -1,0 +1,385 @@
+---
+layout: bootstrap
+title: Titanic Survival Predictor
+search_exclude: true
+description: Titanic ML frontend for survival probability prediction
+permalink: /titanic-predictor
+---
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Titanic Survival Predictor</title>
+<style>
+  :root {
+    --ink: #eaf1ff;
+    --ink-soft: #b4c0d4;
+    --ocean: #2f89c9;
+    --ocean-deep: #195f93;
+    --card: rgba(17, 24, 37, 0.94);
+    --line: #2e3c57;
+    --ok: #30c79e;
+    --danger: #f0647b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at 10% 20%, rgba(47, 137, 201, 0.2), transparent 35%),
+      radial-gradient(circle at 90% 10%, rgba(240, 100, 123, 0.14), transparent 30%),
+      linear-gradient(145deg, #090e18, #121b2c);
+    min-height: 100vh;
+    padding: 30px 14px;
+  }
+  .app {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 20px;
+  }
+  .panel {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+    padding: 24px;
+  }
+  h1 { margin: 0 0 14px; font-size: clamp(1.65rem, 2.2vw, 2.4rem); }
+  .endpoint {
+    background: #131d2e;
+    border: 1px solid #2c425f;
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    color: #c5def5;
+    font-size: 0.92rem;
+  }
+  .endpoint input {
+    width: 100%;
+    margin-top: 8px;
+    border: 1px solid #3a4d6c;
+    border-radius: 10px;
+    padding: 10px 12px;
+    background: #0f1726;
+    color: #ebf3ff;
+  }
+  .endpoint-help { margin-top: 8px; color: #9db3ce; font-size: 0.82rem; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .field { display: flex; flex-direction: column; gap: 7px; }
+  .field.full { grid-column: 1 / -1; }
+  label {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: #c7d7ee;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  input, select {
+    width: 100%;
+    border: 1px solid #3a4d6c;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 0.98rem;
+    background: #0f1726;
+    color: #ebf3ff;
+    outline: none;
+  }
+  input:focus, select:focus {
+    border-color: #49a3dd;
+    box-shadow: 0 0 0 3px rgba(73, 163, 221, 0.18);
+  }
+  .switch-line {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #121c2d;
+    border: 1px solid #30445f;
+    border-radius: 10px;
+    padding: 11px 12px;
+  }
+  .switch-line span { font-weight: 600; color: #d3e1f5; }
+  .actions { margin-top: 14px; display: flex; gap: 10px; }
+  button {
+    border: 0;
+    border-radius: 12px;
+    padding: 11px 16px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    cursor: pointer;
+  }
+  #predictBtn { background: linear-gradient(135deg, var(--ocean), var(--ocean-deep)); color: white; flex: 1; }
+  #resetBtn { background: #273853; color: #d9e6fa; width: 120px; }
+  .status { margin-top: 12px; color: #adc1db; min-height: 24px; font-size: 0.92rem; }
+  .score-box {
+    border-radius: 16px;
+    padding: 18px;
+    background: linear-gradient(155deg, #101a2b, #1b2a42);
+    border: 1px solid #334a69;
+  }
+  .score-label { margin: 0 0 8px; font-size: 0.92rem; color: #9db2cf; text-transform: uppercase; }
+  .score { margin: 0; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1; font-weight: 800; color: #f0f6ff; }
+  .verdict { margin-top: 10px; font-size: 1rem; font-weight: 700; }
+  .bar-wrap { margin-top: 16px; display: grid; gap: 10px; }
+  .bar-line {
+    display: grid;
+    grid-template-columns: 74px 1fr 56px;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #d4e0f2;
+  }
+  .track { height: 10px; border-radius: 99px; background: #2a3a53; overflow: hidden; }
+  .fill { height: 100%; width: 0; transition: width 500ms ease; }
+  #surviveFill { background: linear-gradient(90deg, #2fa78a, var(--ok)); }
+  #dieFill { background: linear-gradient(90deg, #d1576c, var(--danger)); }
+  .payload {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #111a2a;
+    border: 1px solid #314866;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem;
+    color: #c7ddf7;
+    white-space: pre-wrap;
+  }
+  @media (max-width: 900px) { .app { grid-template-columns: 1fr; } }
+  @media (max-width: 540px) { .grid { grid-template-columns: 1fr; } }
+</style>
+
+<main class="app">
+  <section class="panel">
+    <h1>Titanic Survival Predictor</h1>
+
+    <div class="endpoint">
+      <div><strong>API endpoint</strong></div>
+      <input id="endpointInput" type="text" autocomplete="off">
+      <div class="endpoint-help">Auto-detect tries common local ports if the selected URL fails.</div>
+    </div>
+
+    <form id="titanicForm">
+      <div class="grid">
+        <div class="field full">
+          <label for="name">Passenger Name (required by model code)</label>
+          <input id="name" name="name" type="text" value="John Mortensen" required>
+        </div>
+
+        <div class="field">
+          <label for="pclass">Passenger Class</label>
+          <select id="pclass" name="pclass">
+            <option value="1">1st Class</option>
+            <option value="2" selected>2nd Class</option>
+            <option value="3">3rd Class</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="sex">Sex</label>
+          <select id="sex" name="sex">
+            <option value="female">Female</option>
+            <option value="male" selected>Male</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="0" max="100" step="1" value="66" required>
+        </div>
+
+        <div class="field">
+          <label for="fare">Fare</label>
+          <input id="fare" name="fare" type="number" min="0" step="0.01" value="16.00" required>
+        </div>
+
+        <div class="field">
+          <label for="sibsp">Siblings / Spouses</label>
+          <input id="sibsp" name="sibsp" type="number" min="0" step="1" value="1" required>
+        </div>
+
+        <div class="field">
+          <label for="parch">Parents / Children</label>
+          <input id="parch" name="parch" type="number" min="0" step="1" value="1" required>
+        </div>
+
+        <div class="field full">
+          <label for="embarked">Embarked Port</label>
+          <select id="embarked" name="embarked">
+            <option value="C">C (Cherbourg)</option>
+            <option value="Q">Q (Queenstown)</option>
+            <option value="S" selected>S (Southampton)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="switch-line">
+        <span>Traveling Alone</span>
+        <input id="alone" name="alone" type="checkbox">
+      </div>
+
+      <div class="actions">
+        <button id="predictBtn" type="submit">Predict Survival Probability</button>
+        <button id="resetBtn" type="button">Reset</button>
+      </div>
+      <div id="status" class="status"></div>
+    </form>
+  </section>
+
+  <aside class="panel">
+    <div class="score-box">
+      <p class="score-label">Predicted Survival Probability</p>
+      <p id="surviveScore" class="score">--%</p>
+      <div id="verdict" class="verdict">Enter passenger data, then run prediction.</div>
+      <div class="bar-wrap">
+        <div class="bar-line">
+          <span>Survive</span>
+          <div class="track"><div id="surviveFill" class="fill"></div></div>
+          <strong id="survivePct">--%</strong>
+        </div>
+        <div class="bar-line">
+          <span>Die</span>
+          <div class="track"><div id="dieFill" class="fill"></div></div>
+          <strong id="diePct">--%</strong>
+        </div>
+      </div>
+    </div>
+
+    <pre id="payload" class="payload">Request payload will appear here.</pre>
+  </aside>
+</main>
+
+<script>
+  const titanicForm = document.getElementById("titanicForm");
+  const statusEl = document.getElementById("status");
+  const endpointInput = document.getElementById("endpointInput");
+  const payloadEl = document.getElementById("payload");
+  const surviveScoreEl = document.getElementById("surviveScore");
+  const survivePctEl = document.getElementById("survivePct");
+  const diePctEl = document.getElementById("diePct");
+  const surviveFillEl = document.getElementById("surviveFill");
+  const dieFillEl = document.getElementById("dieFill");
+  const verdictEl = document.getElementById("verdict");
+
+  const endpointCandidates = [
+    `${location.origin}/api/titanic/predict`,
+    "http://localhost:8587/api/titanic/predict",
+    "http://127.0.0.1:8587/api/titanic/predict",
+    "http://localhost:5000/api/titanic/predict",
+    "http://127.0.0.1:5000/api/titanic/predict",
+    "http://localhost:8000/api/titanic/predict",
+    "http://127.0.0.1:8000/api/titanic/predict",
+    "https://flask.opencodingsociety.com/api/titanic/predict"
+  ];
+
+  endpointInput.value = localStorage.getItem("titanic_api_url") || endpointCandidates[0];
+
+  function percent(value) {
+    return `${(value * 100).toFixed(2)}%`;
+  }
+
+  function updateResult(die, survive) {
+    surviveScoreEl.textContent = percent(survive);
+    survivePctEl.textContent = percent(survive);
+    diePctEl.textContent = percent(die);
+    surviveFillEl.style.width = `${Math.max(0, Math.min(100, survive * 100))}%`;
+    dieFillEl.style.width = `${Math.max(0, Math.min(100, die * 100))}%`;
+    verdictEl.textContent = survive >= 0.5 ? "Model says likely to survive." : "Model says unlikely to survive.";
+    verdictEl.style.color = survive >= 0.5 ? "var(--ok)" : "var(--danger)";
+  }
+
+  function buildPayload() {
+    return {
+      name: document.getElementById("name").value.trim() || "Anonymous Passenger",
+      pclass: Number(document.getElementById("pclass").value),
+      sex: document.getElementById("sex").value,
+      age: Number(document.getElementById("age").value),
+      sibsp: Number(document.getElementById("sibsp").value),
+      parch: Number(document.getElementById("parch").value),
+      fare: Number(document.getElementById("fare").value),
+      embarked: document.getElementById("embarked").value,
+      alone: document.getElementById("alone").checked
+    };
+  }
+
+  async function tryPredictAt(url, payload) {
+    const response = await fetch(url, {
+      method: "POST",
+      mode: "cors",
+      credentials: "omit",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+
+    if (typeof data.survive !== "number" || typeof data.die !== "number") {
+      throw new Error("API did not return die/survive numbers.");
+    }
+    return data;
+  }
+
+  titanicForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const preferredURL = endpointInput.value.trim();
+    const payload = buildPayload();
+    payloadEl.textContent = JSON.stringify(payload, null, 2);
+    statusEl.textContent = "Predicting...";
+
+    try {
+      const urlsToTry = [preferredURL, ...endpointCandidates.filter((url) => url !== preferredURL)];
+      let data = null;
+      let workingURL = "";
+      let lastError = "unknown error";
+
+      for (const url of urlsToTry) {
+        try {
+          data = await tryPredictAt(url, payload);
+          workingURL = url;
+          break;
+        } catch (err) {
+          lastError = err.message;
+        }
+      }
+
+      if (!data) throw new Error(lastError);
+
+      updateResult(data.die, data.survive);
+      endpointInput.value = workingURL;
+      localStorage.setItem("titanic_api_url", workingURL);
+      statusEl.textContent = `Prediction complete via ${workingURL}`;
+    } catch (error) {
+      const msg = String(error.message || "");
+      if (msg.toLowerCase().includes("fetch")) {
+        statusEl.textContent = "Prediction failed: no reachable backend endpoint found on common local ports.";
+      } else if (msg.includes("HTTP 404")) {
+        statusEl.textContent = "Prediction failed: route /api/titanic/predict returned 404 on the selected backend.";
+      } else {
+        statusEl.textContent = `Prediction failed: ${msg}`;
+      }
+    }
+  });
+
+  document.getElementById("resetBtn").addEventListener("click", () => {
+    titanicForm.reset();
+    document.getElementById("name").value = "John Mortensen";
+    document.getElementById("pclass").value = "2";
+    document.getElementById("sex").value = "male";
+    document.getElementById("age").value = "66";
+    document.getElementById("sibsp").value = "1";
+    document.getElementById("parch").value = "1";
+    document.getElementById("fare").value = "16.00";
+    document.getElementById("embarked").value = "S";
+    payloadEl.textContent = "Request payload will appear here.";
+    surviveScoreEl.textContent = "--%";
+    survivePctEl.textContent = "--%";
+    diePctEl.textContent = "--%";
+    surviveFillEl.style.width = "0%";
+    dieFillEl.style.width = "0%";
+    verdictEl.textContent = "Enter passenger data, then run prediction.";
+    verdictEl.style.color = "var(--ink)";
+    statusEl.textContent = "";
+  });
+</script>
