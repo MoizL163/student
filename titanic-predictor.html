@@ -353,7 +353,15 @@ permalink: /titanic-predictor
     } catch (error) {
       const msg = String(error.message || "");
       if (msg.toLowerCase().includes("fetch")) {
-        statusEl.textContent = "Prediction failed: no reachable backend endpoint found on common local ports.";
+        const mixedContentRisk =
+          location.protocol === "https:" &&
+          urlsToTry.some((url) => url.startsWith("http://localhost") || url.startsWith("http://127.0.0.1"));
+        if (mixedContentRisk) {
+          statusEl.textContent =
+            "Prediction failed: browser blocked HTTPS page -> HTTP localhost (mixed content). Open this page on http://localhost and retry.";
+        } else {
+          statusEl.textContent = "Prediction failed: no reachable backend endpoint found on common local ports.";
+        }
       } else if (msg.includes("HTTP 404")) {
         statusEl.textContent = "Prediction failed: route /api/titanic/predict returned 404 on the selected backend.";
       } else {
