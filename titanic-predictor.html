@@ -321,12 +321,11 @@ permalink: /titanic-predictor
     return data;
   }
 
-  titanicForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  async function runPrediction(statusPrefix) {
     const preferredURL = endpointInput.value.trim();
     const payload = buildPayload();
     payloadEl.textContent = JSON.stringify(payload, null, 2);
-    statusEl.textContent = "Predicting...";
+    statusEl.textContent = statusPrefix || "Predicting...";
 
     try {
       const urlsToTry = [preferredURL, ...endpointCandidates.filter((url) => url !== preferredURL)];
@@ -352,6 +351,7 @@ permalink: /titanic-predictor
       statusEl.textContent = `Prediction complete via ${workingURL}`;
     } catch (error) {
       const msg = String(error.message || "");
+      const urlsToTry = [preferredURL, ...endpointCandidates.filter((url) => url !== preferredURL)];
       if (msg.toLowerCase().includes("fetch")) {
         const mixedContentRisk =
           location.protocol === "https:" &&
@@ -368,6 +368,15 @@ permalink: /titanic-predictor
         statusEl.textContent = `Prediction failed: ${msg}`;
       }
     }
+  }
+
+  titanicForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    await runPrediction("Predicting...");
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    runPrediction("Loading default prediction...");
   });
 
   document.getElementById("resetBtn").addEventListener("click", () => {
