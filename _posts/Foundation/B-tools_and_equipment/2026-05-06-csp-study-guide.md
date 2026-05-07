@@ -16,7 +16,7 @@ breadcrumb: True
     <p class="text-indigo-200 text-sm font-semibold uppercase tracking-widest mb-2">AP Computer Science Principles</p>
     <h1 class="text-4xl font-extrabold mb-3">My Exam Study Plan</h1>
     <p class="text-indigo-100 text-base leading-relaxed mb-4">
-      May 8–13 &nbsp;·&nbsp; Exam Day: <strong class="text-white">May 14th</strong>
+      Fri May 8 – Wed May 13 &nbsp;·&nbsp; Exam Day: <strong class="text-white">Thu May 14th</strong>
     </p>
     <p class="text-indigo-100 text-base leading-relaxed">
       With the exam a week out, I've taken stock of where I stand and built a targeted six-day plan around my specific gaps.
@@ -98,32 +98,32 @@ breadcrumb: True
         </thead>
         <tbody>
           <tr class="bg-gray-800 border-b border-gray-700">
-            <td class="px-4 py-3 font-semibold text-indigo-400">Thu May 8</td>
+            <td class="px-4 py-3 font-semibold text-indigo-400">Fri May 8</td>
             <td class="px-4 py-3 text-gray-200">Iteration &amp; Loop Tracing practice</td>
             <td class="px-4 py-3 text-gray-400">45 min</td>
           </tr>
           <tr class="bg-gray-900 border-b border-gray-700">
-            <td class="px-4 py-3 font-semibold text-indigo-400">Fri May 9</td>
+            <td class="px-4 py-3 font-semibold text-indigo-400">Sat May 9</td>
             <td class="px-4 py-3 text-gray-200">Math Expressions &amp; Modulo Logic</td>
             <td class="px-4 py-3 text-gray-400">45 min</td>
           </tr>
           <tr class="bg-gray-800 border-b border-gray-700">
-            <td class="px-4 py-3 font-semibold text-indigo-400">Sat May 10</td>
+            <td class="px-4 py-3 font-semibold text-indigo-400">Sun May 10</td>
             <td class="px-4 py-3 text-gray-200">Random Values &amp; Algorithm Development</td>
             <td class="px-4 py-3 text-gray-400">60 min</td>
           </tr>
           <tr class="bg-gray-900 border-b border-gray-700">
-            <td class="px-4 py-3 font-semibold text-indigo-400">Sun May 11</td>
+            <td class="px-4 py-3 font-semibold text-indigo-400">Mon May 11</td>
             <td class="px-4 py-3 text-gray-200">Parallel &amp; Distributed Computing <span class="text-gray-500">(30 min)</span> → <strong class="text-white">Full Mock MC Exam</strong></td>
             <td class="px-4 py-3 text-gray-400">2.5 hrs</td>
           </tr>
           <tr class="bg-gray-800 border-b border-gray-700">
-            <td class="px-4 py-3 font-semibold text-indigo-400">Mon May 12</td>
+            <td class="px-4 py-3 font-semibold text-indigo-400">Tue May 12</td>
             <td class="px-4 py-3 text-gray-200">Review mock MC misses by topic → FRQ prep</td>
             <td class="px-4 py-3 text-gray-400">90 min</td>
           </tr>
           <tr class="bg-gray-900">
-            <td class="px-4 py-3 font-semibold text-indigo-400">Tue May 13</td>
+            <td class="px-4 py-3 font-semibold text-indigo-400">Wed May 13</td>
             <td class="px-4 py-3 text-gray-200">Light cheat sheet review, early sleep</td>
             <td class="px-4 py-3 text-gray-400">30 min</td>
           </tr>
